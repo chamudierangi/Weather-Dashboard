@@ -1,0 +1,141 @@
+/* මූලික සැකසුම් (Reset parameters) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* මුළු පිටුවේම මූලික පසුබිම සහ Layout එක */
+body {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.8s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- Dynamic Background Images (කාලගුණය අනුව වෙනස් වන රූප) --- */
+
+/* අව්ව සහිත / පැහැදිලි කාලගුණය (Sunny / Clear) */
+body.sunny {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                     url('https://images.unsplash.com/photo-1504386106331-3e4e71712b38?q=80&w=1600');
+}
+
+/* වළාකුළු සහිත කාලගුණය (Cloudy / Clouds) */
+body.cloudy {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                     url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=1600');
+}
+
+/* වැසි සහ ගෙගුරුම් සහිත කාලගුණය (Rainy / Rain / Thunderstorm) */
+body.rainy {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                     url('https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?q=80&w=1600');
+}
+
+/* මීදුම් සහිත කාලගුණය (Misty / Haze / Mist) */
+body.misty {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                     url('https://images.unsplash.com/photo-1485236715568-ddc5ee6ca227?q=80&w=1600');
+}
+
+/* ------------------------------------------------------------- */
+
+/* Weather Card එක සැකසීම (Glassmorphic Card) */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* සෙවුම් කොටස (Search Section) */
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 12px 20px;
+    height: 50px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #fff;
+    color: #4facfe;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.search button:hover {
+    background: #ebfffc;
+}
+
+/* කාලගුණ දත්ත පෙන්වන කොටස (Weather Info Section) */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#weather-icon {
+    width: 120px;
+    margin-top: 10px;
+}
+
+#temp {
+    font-size: 65px;
+    font-weight: 500;
+    margin-top: -10px;
+}
+
+#city {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+#description {
+    font-size: 18px;
+    text-transform: capitalize;
+    opacity: 0.8;
+}
+
+/* Error Message Style */
+.error-msg {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #ff4a4a;
+    margin-top: 10px;
+}
